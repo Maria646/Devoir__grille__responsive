@@ -2,7 +2,7 @@
 const CACHE_NAME = 'static-cache-v2';
 
 const FILES_TO_CACHE = [
-    'offline.html',
+    'index.html',
     ];
     
     self.addEventListener('install', (evt) => {
@@ -33,7 +33,7 @@ const FILES_TO_CACHE = [
             );
             self.clients.claim();
             });
-            
+
             self.addEventListener('fetch', (evt) => {
                 console.log('[ServiceWorker] Fetch', evt.request.url);
                 //Add fetch event handler here.
